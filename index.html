@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Biomarker101</title>
-    </head>
-    <body>
-        WIP
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>biomarker101.com</title>
+    <style>
+    :root{
+      --bg1:#fff;  
+      --bg2:#4B7D84; 
+      --text:#f6f7f5;
+      --shadow:rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      min-height:100svh;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(1200px circle at 15% 15%, rgba(255,255,255,.06), transparent 40%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      color:var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.25;
+    }
+    main{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:clamp(12px, 2vmin, 24px);
+      padding:clamp(16px,4vmin,40px);
+      text-align:center;
+    }
+    img{
+      width:clamp(200px, 45vmin, 600px);
+      height:auto;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,.25));
+      user-select:none;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      -webkit-user-drag:none;
+      user-drag:none;
+      -webkit-touch-callout:none;
+    }
+    /* Desktop/base sizes (unchanged) */
+    h1{
+      margin:0;
+      font-weight:700;
+      letter-spacing:.02em;
+      font-size:clamp(1.1rem, 1.6vw + 0.6rem, 1.9rem);
+      text-shadow:
+        0 2px 10px var(--shadow),
+        0 1px 0 rgba(0,0,0,.45);
+      user-select:none;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      -webkit-touch-callout:none;
+    }
+    .subhead{
+      margin:0;
+      font-weight:600;
+      letter-spacing:.02em;
+      opacity:.95;
+      font-size:clamp(0.9rem, 1vw + 0.5rem, 1.25rem);
+      text-shadow: 0 1px 6px var(--shadow);
+      user-select:none;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      -webkit-touch-callout:none;
+    }
+
+    /* Smartphone portrait boost (e.g., ~1080×1920 hardware => narrow CSS width) */
+    @media (orientation: portrait) and (max-width: 480px){
+      h1{ font-size: 2.4rem; }
+      .subhead{ font-size: 1.3rem; }
+    }
+
+    @media (prefers-reduced-motion:no-preference){
+      img{ animation: float 3s ease-in-out infinite; }
+      @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(+9px)} }
+    }
+    </style>
+  </head>
+  <body>
+    <main role="main" aria-label="Biomarker101.com">
+      <img src="./icon.webp" alt="Site icon" draggable="false">
+      <h1>Biomarker101.com</h1>
+      <p class="subhead">Under Construction</p>
+    </main>
+  </body>
 </html>
